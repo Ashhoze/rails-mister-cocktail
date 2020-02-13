@@ -1,0 +1,20 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://blog.ubaldi.com/wp-content/uploads/2019/05/cocktails-blender-1240x503.jpg);">
+  <div class="container">
+    <h1>A Vos Cocktails!</h1>
+    <p>*L'abus d'alcool nuit gravement a la santé</p>
+  </div>
+</div>
+<% @cocktails.each do |cocktail|%>
+<div class="card col-4 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.destinationcocktails.fr/wp-content/uploads/2019/11/le_secret_des_cocktails_a_etages-2.jpg)">
+
+  <div class="container">
+
+   <li> <h4><b><%= link_to "#{cocktail.name}", cocktail_path(cocktail)  %></b></h4>
+    </li>
+  </div>
+</div>
+
+
+<% end  %>
+<%= link_to "Pour plus de créativité", new_cocktail_path %>
